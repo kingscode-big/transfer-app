@@ -27,7 +27,7 @@ export default function Airtime() {
 
     const handleInput = (e) => {
 
-        console.log(e.target.value)
+      
         const { name, value } = e.target;
         if (name === 'network') setNetwork(value);
         if (name === 'phoneNumber') setPhoneNumber(value);
@@ -35,7 +35,7 @@ export default function Airtime() {
       };
 
       const handleSubmit =(e)=>{
-        console.log(e.target.value)
+
         e.preventDefault();
         
         
@@ -92,7 +92,7 @@ export default function Airtime() {
          <section className='App-airtime-section'>
             <button className='App-button-back'><Link to={'/body' } className='App-button-back-link' >Back</Link></button>
             <div className='App-airtime-head'><Link to={'/body'} className='App-home-airtime'>
-            <FontAwesomeIcon icon={faSquarePhoneFlip}  className='App-Airtime-icon' />Airtime</Link></div>
+            Airtime</Link></div>
     
             <div className='App-airtime-banner'><p className='App-cash'>N70</p><p className='App-Cash-up'> Cashback </p>
               <div className='App-top-up-first'>On your first two Airtime Top-up</div>
@@ -128,8 +128,8 @@ export default function Airtime() {
                                 </div>
                                  <input  className='input-banner1' type="number" placeholder='Amount' name='Amount'  value={amount}/>
                                 <div className='App-airtime-display-header'>
-                                    <p className='overlay1'><Link to={'/airtimehistory'}><p className='App-Airtime-history'>History</p></Link> </p>
-                                    <p className='overlay1'><Link to={'/airtimehistory'}><p className='App-Airtime-history1'>Recent History</p></Link> </p>
+                                    <p className='overlay1'><Link to={'/airtimehistory'}><span className='App-Airtime-history'>History</span></Link> </p>
+                                    <p className='overlay1'><Link to={'/airtimehistory'}><span className='App-Airtime-history1'>Recent History</span></Link> </p>
                                  </div>
                                   
                                 <button className='App-airtime-button-send' onClick={handleSubmit}>send</button>
